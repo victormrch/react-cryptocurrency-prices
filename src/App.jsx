@@ -1,26 +1,19 @@
 import { AppContainer, AppHeading, AppImage } from "./App.style";
 import CryptoImage from "./img/principal-cryptos.png";
-import Form from "./components/form/Form";
-import Result from "./components/Result/Result";
+import Form from "./components/Form/Form.component";
+import Result from "./components/Result/Result.component";
 import { useState, useEffect } from "react";
+import { getCryptoPrices } from "./services/cryptocurrenciesPrices";
 
 function App() {
   const [currencies, setCurrencies] = useState({});
   const [result, setResult] = useState({});
 
+  const { currency, crypto } = currencies;
+
   useEffect(() => {
     if (Object.keys(currencies).length > 0) {
-      const cryptoPrice = async () => {
-        const { currency, crypto } = currencies;
-
-        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${crypto}&tsyms=${currency}`;
-
-        const response = await fetch(url);
-        const result = await response.json();
-
-        setResult(result.DISPLAY[crypto][currency]);
-      };
-      cryptoPrice();
+      getCryptoPrices(currency, crypto).then(setResult);
     }
   }, [currencies]);
 

@@ -16,6 +16,7 @@ const Result = ({ result }) => {
     LASTUPDATE,
     MKTCAP,
   } = result;
+
   return (
     <ResultContainer>
       <ResultImage
