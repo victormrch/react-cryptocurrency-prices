@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import useSelectCurrency from '../../hooks/useSelectCurrency';
 import { currencies } from './Form.model';
 import { FormInputSubmit } from './Form.style';
-import { Error } from '../ValidationError/Error.component';
+import { Error } from '../validationError/Error.component';
 import { getCryptocurrenciesList } from '../../services/cryptocurrenciesList';
 
 const Form = props => {
