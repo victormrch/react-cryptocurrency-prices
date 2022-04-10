@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview",
+		"preview": "npm run build && vite preview",
 		"prettier": "prettier --write .",
 		"lint": "eslint --fix . --ext .js,.jsx",
 		"deploy": "gh-pages -d dist"
