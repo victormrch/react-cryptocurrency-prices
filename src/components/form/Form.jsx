@@ -3,7 +3,7 @@ import useSelectCurrency from '../../hooks/useSelectCurrency';
 import { currencies } from './Form.model';
 import { FormInputSubmit } from './Form.style';
 import { getCryptocurrenciesList } from '../../services/cryptocurrenciesList';
-import { ValidationError } from '../validationError/validationError';
+import { ValidationError } from '../validationError';
 
 const Form = props => {
 	const { setCurrencies } = props;
