@@ -3,9 +3,9 @@ import {
 	ResultPrice,
 	ResultText,
 	ResultImage,
-} from './Result.style';
+} from './price.style';
 
-export const Results = ({ result }) => {
+export const Price = ({ result }) => {
 	const {
 		PRICE,
 		HIGHDAY,
