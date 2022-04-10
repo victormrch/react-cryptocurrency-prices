@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import useSelectCurrency from '../../hooks/useSelectCurrency';
 import { currencies } from './Form.model';
 import { FormInputSubmit } from './Form.style';
-import { Error } from '../validationError/error';
 import { getCryptocurrenciesList } from '../../services/cryptocurrenciesList';
+import { ValidationError } from '../validationError/validationError';
 
 const Form = props => {
 	const { setCurrencies } = props;
@@ -40,9 +40,9 @@ const Form = props => {
 	return (
 		<>
 			{error && (
-				<Error>
+				<ValidationError>
 					All fields are required. Please select your Currency and Crypto.
-				</Error>
+				</ValidationError>
 			)}
 			<form onSubmit={handleSubmit}>
 				<SelectCurrency />
