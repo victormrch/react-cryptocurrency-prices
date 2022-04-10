@@ -1,7 +1,7 @@
 import { AppContainer, AppHeading, AppImage } from './App.style';
 import CryptoImage from './img/principal-cryptos.png';
-import Form from './components/form/Form.component';
-import Result from './components/result/Result.component';
+import Form from './components/form/Form';
+import Result from './components/result/Result';
 import { useState, useEffect } from 'react';
 import { getCryptoPrices } from './services/cryptocurrenciesPrices';
 
