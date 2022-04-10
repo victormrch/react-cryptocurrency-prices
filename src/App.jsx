@@ -1,7 +1,7 @@
 import { AppContainer, AppHeading, AppImage } from './App.style';
 import CryptoImage from './img/principal-cryptos.png';
 import Form from './components/form/Form';
-import Result from './components/result/result';
+import { Results } from './components/result/Results';
 import { useState, useEffect } from 'react';
 import { getCryptoPrices } from './services/cryptocurrenciesPrices';
 
@@ -23,7 +23,7 @@ function App() {
 			<div>
 				<AppHeading>Cryptocurrency Exchanger</AppHeading>
 				<Form setCurrencies={setCurrencies} />
-				{result.PRICE && <Result result={result} />}
+				{result.PRICE && <Results result={result} />}
 			</div>
 		</AppContainer>
 	);

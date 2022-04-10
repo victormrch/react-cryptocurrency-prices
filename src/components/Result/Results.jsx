@@ -5,7 +5,7 @@ import {
 	ResultImage,
 } from './Result.style';
 
-const Result = ({ result }) => {
+export const Results = ({ result }) => {
 	const {
 		PRICE,
 		HIGHDAY,
@@ -45,5 +45,3 @@ const Result = ({ result }) => {
 		</ResultContainer>
 	);
 };
-
-export default Result;
